@@ -1,0 +1,62 @@
+﻿@media(max-width:900px) {
+    body, body.fluid.secondary {
+        padding: 0 7%;
+    }
+
+    #page #primary {
+        float: none;
+        margin: 0;
+    }
+
+    #page #content {
+        margin: 0 9.464285714286%;
+    }
+
+    #page footer .permalink {
+        left: -12.114537444934%;
+    }
+
+    #page #main .widget-area {
+        background: #000;
+        color: #ccc;
+        border: 0;
+        float: left;
+        margin-right: 0 !important;
+        margin: 0;
+        padding: 1.6em 9.46% 3.23em;
+        overflow: hidden;
+        width: 100%;
+    }
+
+        #page #main .widget-area .widget {
+            margin: 0;
+        }
+
+    #wp-calendar caption {
+        color: #ccc;
+    }
+
+    #wp-calendar tbody td {
+        background: #333;
+        border-color: #000;
+        color: #ccc;
+    }
+
+    #colophon, #supplementary {
+        background: #000;
+        border-color: #333;
+        color: #ccc;
+    }
+
+    #page #supplementary .widget-area {
+        background: #000;
+        color: #ccc;
+        border: 0;
+        float: left;
+        margin-right: 0;
+        margin: 0;
+        padding: 1.6em 0 0;
+        overflow: hidden;
+        width: 100%;
+    }
+}

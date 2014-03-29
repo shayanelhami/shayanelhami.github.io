@@ -1,0 +1,103 @@
+﻿body {
+    padding: 0 20%;
+    background: #ccc;
+}
+
+#page {
+    margin: 0 auto;
+}
+
+#content {
+    margin: 0 10%;
+}
+
+#colophon {
+    clear: both;
+}
+
+.widget-area {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body.fluid.secondary {
+    padding: 0 7%;
+}
+
+.secondary #primary {
+    float: left;
+    margin: 0 -50% 0 0;
+    width: 100%;
+}
+
+.secondary #content {
+    margin: 0 50% 0 10%;
+}
+
+#main .widget-area {
+    float: right;
+    margin-right: 10%;
+    width: 33%;
+}
+
+    #main .widget-area .widget {
+        margin: 0 0 0 25%;
+    }
+
+#tertiary {
+    clear: both;
+}
+
+.error404 #page #content, .image-attachment #content {
+    margin: 0 10%;
+}
+
+.alignleft {
+    display: inline;
+    float: left;
+    margin-top: .5em;
+    margin-right: 1.6em;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-top: .5em;
+    margin-left: 1.6em;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin: .5em auto;
+}
+
+
+#main {
+    clear: both;
+    padding: 3em 0 0;
+}
+
+.page-header {
+    margin: 0 0 3em;
+}
+
+.hentry {
+    margin: 0 0 3em;
+    position: relative;
+}
+
+.single .hentry, .page .hentry {
+    margin: 0 0 1.5em;
+}
+
+.entry-header {
+    position: relative;
+}
+
+footer.entry-meta {
+    clear: both;
+    padding: .5em 0;
+}

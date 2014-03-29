@@ -1,0 +1,29 @@
+﻿@media(max-width:450px) {
+    body, body.fluid.secondary {
+        padding: 0;
+    }
+
+    #page .alignleft {
+        clear: both;
+        display: block;
+        float: none;
+        margin: .5em auto;
+    }
+
+    #page .alignright {
+        clear: both;
+        display: block;
+        float: none;
+        margin: .5em auto;
+    }
+
+    #page .aligncenter {
+        clear: both;
+        display: block;
+        margin: .5em auto;
+    }
+
+    #page footer .permalink {
+        display: none;
+    }
+}
