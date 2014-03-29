@@ -32,7 +32,7 @@
                     <article id="post-211" class="post-211 post type-post status-publish format-standard hentry category-programming tag-ecma-262 tag-ecmascript tag-javascript tag-jslint tag-strict-mode">
 
                         <header class="entry-header">
-                            <h1 class="entry-title"><a href="http://geeky-days.com/javascript-use-strict-summary/" title="Permalink to javascript ‘use strict’ a quick summary" rel="bookmark">javascript ‘use strict’ a quick summary</a></h1>
+                            <h1 class="entry-title"><a href="javascript-use-strict-summary" title="Permalink to javascript ‘use strict’ a quick summary" rel="bookmark">javascript ‘use strict’ a quick summary</a></h1>
                             <div class="entry-meta">
                                 <span class="byline">Posted by <span class="author vcard"><a class="url fn n" href="https://plus.google.com/u/0/+ShayanE?rel=author" title="View all posts by Shayan" rel="author">Shayan</a></span></span>
                             </div>
@@ -90,13 +90,340 @@
                             </p>
 
                             <p class="date-link">
-                                <a href="http://geeky-days.com/javascript-use-strict-summary/" title="Permalink to javascript ‘use strict’ a quick summary" rel="bookmark" class="permalink">
+                                <a href="javascript-use-strict-summary" title="Permalink to javascript ‘use strict’ a quick summary" rel="bookmark" class="permalink">
                                     <span class="month">Nov</span><span class="sep">·</span><span class="day">16</span>
                                 </a>
                             </p>
                         </footer>
                     </article>
-                    <nav id="nav-below">
+                    
+					
+					
+
+                    <article id="post-196" class="post-196 post type-post status-publish format-standard hentry category-programming tag-asp-net tag-mvc tag-oauth">
+                        <header class="entry-header">
+                            <h1 class="entry-title"><a href="external-login-callback" title="Permalink to Dissecting ExternalLoginCallback of AccountController" rel="bookmark">Dissecting ExternalLoginCallback of AccountController</a></h1>
+                            <div class="entry-meta">
+                                <span class="byline">Posted by <span class="author vcard"><a class="url fn n" href="https://plus.google.com/u/0/+ShayanE?rel=author" title="View all posts by Shayan" rel="author">Shayan</a></span></span>
+                            </div>
+                        </header>
+                        <div class="entry-content">
+                            <p>ASP.NET MVC 4 default Internet porject template generates some code for AccountControler which has a support for external OAuth providers like Twitter, Google, Facebook and Microsoft which is great. Except that some parts of the code is not really as clear as it could be. An example? <code>ExternalLoginCallback</code> which is an action to be called by those external sites when authentication was successful (or not).</p>
+                            <p>Here is the code and in this article I’ll try to explain those parts of it which might not be very clear in the first glance:</p>
+                            <p><img class="alignnone size-full wp-image-201" alt="ExternalLoginCallback" src="images/ExternalLoginCallback.png" width="554" height="723" /></p>
+                            <p><a href="external-login-callback#more" class="more-link">Continue reading <span class="meta-nav">→</span></a></p>
+                        </div>
+
+                        <footer class="entry-meta">
+                            <p class="tag-links taxonomy-links">
+                                Tagged
+                                <span class="tag">ASP.NET</span>,
+                                <span class="tag">MVC</span>,
+                                <span class="tag">OAuth</span>
+                            </p>
+
+                            <p class="date-link">
+                                <a href="external-login-callback" title="Permalink to Dissecting ExternalLoginCallback of AccountController" rel="bookmark" class="permalink">
+                                    <span class="month">Oct</span><span class="sep">·</span><span class="day">20</span>
+                                </a>
+                            </p>
+                        </footer>
+                    </article>
+
+                    <article id="post-166" class="post-166 post type-post status-publish format-standard hentry category-programming tag-api tag-oauth tag-rest tag-restful tag-twitter">
+                        <header class="entry-header">
+                            <h1 class="entry-title"><a href="understanding-twitter-rest-api" title="Permalink to Understanding Twitter REST API" rel="bookmark">Understanding Twitter REST API</a></h1>
+                            <div class="entry-meta">
+                                <span class="byline">Posted by <span class="author vcard"><a class="url fn n" href="https://plus.google.com/u/0/+ShayanE?rel=author" title="View all posts by Shayan" rel="author">Shayan</a></span></span>
+                            </div>
+                        </header>
+                        <div class="entry-content">
+                            <p>Ever wanted to use Twitter API and wondered if REST is supposed to be some simple HTTP call what is all &nbsp;this fuzz about? Where does OAuth come in and why do I need all these complex libraries and why can’t I simply say:</p>
+<pre style="background: #fff; overflow-x: auto;"><span style="color: #800000; font-weight: bold;">using</span> <span style="color: #808030;">(</span>var wc <span style="color: #808030;">=</span> <span style="color: #800000; font-weight: bold;">new</span> WebClient<span style="color: #808030;">(</span><span style="color: #808030;">)</span><span style="color: #808030;">)</span>
+<span style="color: #800080;">{</span>
+    var tweets <span style="color: #808030;">=</span> wc<span style="color: #808030;">.</span>DownloadString
+                            <span style="color: #808030;">(</span><span style="color: #800000;">"</span><span style="color: #0000e6;">https://api.twitter.com/...</span><span style="color: #800000;">"</span><span style="color: #808030;">)</span><span style="color: #800080;">;</span>
+<span style="color: #800080;">}</span></pre>
+                            <p>Well of course you can! It’s just about finding the right API “endpoint” you need and make an HTTP call by the appropriate verb (GET or POST). For example this is the endpoint for searching tweets:&nbsp;https://api.twitter.com/1.1/search/tweets.json (notice that we are dicussing Twitter’s API version 1.1 here).</p>
+                            <p>
+                                But you have probably tried it and you have seen&nbsp;”Bad Authentication data” message from Twitter. What your code actually needs is an extra value in HTTP header with “Authorization” key. What for? Generally for two main reasons:<br>
+                                <a href="understanding-twitter-rest-api#more" class="more-link">Continue reading <span class="meta-nav">→</span></a>
+                            </p>
+                        </div>
+
+                        <footer class="entry-meta">
+                            <p class="tag-links taxonomy-links">
+                                Tagged
+                                <span class="tag">API</span>,
+                                <span class="tag">OAuth</span>,
+                                <span class="tag">REST</span>,
+                                <span class="tag">RESTful</span>,
+                                <span class="tag">Twitter</span>
+                            </p>
+
+                            <p class="date-link"><a href="understanding-twitter-rest-api" title="Permalink to Understanding Twitter REST API" rel="bookmark" class="permalink"><span class="month">Oct</span><span class="sep">·</span><span class="day">19</span></a></p>
+                        </footer>
+                    </article>
+
+                    <article id="post-141" class="post-141 post type-post status-publish format-standard hentry category-programming tag-net tag-c tag-code-formatting tag-roslyn">
+
+                        <header class="entry-header">
+                            <h1 class="entry-title"><a href="format-code-by-roslyn" title="Permalink to Format C# code by Roslyn" rel="bookmark">Format C# code by Roslyn</a></h1>
+                            <div class="entry-meta">
+                                <span class="byline">Posted by <span class="author vcard"><a class="url fn n" href="https://plus.google.com/u/0/+ShayanE?rel=author" title="View all posts by Shayan" rel="author">Shayan</a></span></span>
+                            </div>
+                        </header>
+
+                        <div class="entry-content">
+                            <p>Isn’t <a href="http://msdn.microsoft.com/en-us/vstudio/roslyn.aspx" target="_blank">Roslyn</a> just great? It is a “compiler as a service”. In other words C# (and VB.NET) compiler written fully in .NET. In addition to many cool services from syntax walking, intelliSense, et cetera, et cetera to code formatting which I want to explain here.</p>
+                            <p>Formatting or auto-formatting, exactly the same way you get by Format Document (Ctrl+E, D) command in Visual Studio, can be achieved in one line(!) of code.</p>
+                            <p><img class="alignnone size-full wp-image-145" alt="Format document in Visual Studio 2012" src="images/FormatDocumentInVisualStudio1.png" width="457" height="396"></p>
+                            <p>First you need to add references to&nbsp;<code>Roslyn.Services.dll</code> and <code>Roslyn.Compilers.dll</code> and then here it is the code that accepts an unformatted code and gives you the formatted one as a string:</p>
+                            <div style="border: #000080 1px solid; color: #000; font-family: &#39;Courier New&#39;, Courier, Monospace; font-size: 10pt;">
+                                <div style="background-color: #ffffff; overflow: auto; padding: 2px 5px; white-space: nowrap;">
+                                    <span style="background: #ffffff; color: #0000ff;">var</span><span style="background: #ffffff; color: #000000;"> formattedCode = </span><br>
+                                    <span style="background: #ffffff; color: #000000;">&nbsp; &nbsp; &nbsp;&nbsp;</span><span style="background: #ffffff; color: #2b91af;">Solution</span><span style="background: #ffffff; color: #000000;">.Create(</span><span style="background: #ffffff; color: #2b91af;">SolutionId</span><span style="background: #ffffff; color: #000000;">.CreateNewId()).</span><br>
+                                    <span style="background: #ffffff; color: #000000;">&nbsp; &nbsp; &nbsp; AddCSharpProject(</span><span style="background: #ffffff; color: #a31515;">“dummy”</span><span style="background: #ffffff; color: #000000;">, </span><span style="background: #ffffff; color: #a31515;">“dummy”</span><span style="background: #ffffff; color: #000000;">).</span><br>
+                                    <span style="background: #ffffff; color: #000000;">&nbsp; &nbsp; &nbsp; AddDocument(</span><span style="background: #ffffff; color: #a31515;">“dummy.cs”</span><span style="background: #ffffff; color: #000000;">, unformattedCode).</span><br>
+                                    <span style="background: #ffffff; color: #000000;">&nbsp; &nbsp; &nbsp; Format().</span><br>
+                                    <span style="background: #ffffff; color: #000000;">&nbsp; &nbsp; &nbsp; GetText().</span><br>
+                                    <span style="background: #ffffff; color: #000000;">&nbsp; &nbsp; &nbsp; ToString();</span>
+                                </div>
+                            </div>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                        </div>
+
+                        <footer class="entry-meta">
+
+                            <p class="tag-links taxonomy-links">
+                                Tagged
+                                <span class="tag">.NET</span>,
+                                <span class="tag">C#</span>,
+                                <span class="tag">Code formatting</span>,
+                                <span class="tag">Roslyn</span>
+                            </p>
+
+                            <p class="date-link"><a href="format-code-by-roslyn" title="Permalink to Format C# code by Roslyn" rel="bookmark" class="permalink"><span class="month">Jun</span><span class="sep">·</span><span class="day">07</span></a></p>
+                        </footer>
+                    </article>
+
+                    <article id="post-117" class="post-117 post type-post status-publish format-standard hentry category-programming tag-net tag-csv tag-excel tag-unicode tag-utf8">
+
+                        <header class="entry-header">
+                            <h1 class="entry-title"><a href="incorrect-pound-sign-csv" title="Permalink to Incorrect pound sign in CSV files" rel="bookmark">Incorrect pound sign in CSV files</a></h1>
+                            <div class="entry-meta">
+                                <span class="byline">Posted by <span class="author vcard"><a class="url fn n" href="https://plus.google.com/u/0/+ShayanE?rel=author" title="View all posts by Shayan" rel="author">Shayan</a></span></span>
+                            </div>
+                        </header>
+
+                        <div class="entry-content">
+                            <p>So you find yourself saving a CSV file in C# or Visual Basic.NET using this code:</p>
+                            <p><code><span class="type">File</span>.WriteAllText(<span class="string">"filename.csv"</span>, content);</code></p>
+                            <p>And then when you open your &nbsp;CSV file in Excel you get all £ signs replaced with strange&nbsp;Â£ symbols? Here is the trick: add encoding:</p>
+                            <p><code><span class="type">File</span>.WriteAllText(<span class="string">"filename.csv"</span>, content,<span class="type">Encoding</span>.UTF8);</code></p>
+                            <p>But be very careful: Only UTF8 will help you with Excel. Other encodings (<code>UTF32</code> and <code>Encoding.Unicode</code> which is <code>UTF16</code> in .NET) will not work and Excel will see all you comma separated fields as one giant column! (yes, it is a bug in Excel, nothing that you can do about it).</p>
+                            <p>What is said is true about all&nbsp;<code>System.IO.File</code> static methods which accept encoding parameter like&nbsp;<code>WriteAllText</code>, <code>AppendAllLines</code>,&nbsp;<code>AppendAllText</code> and&nbsp;<code>WriteAllLines</code>&nbsp;but if, for example, you want to use text writing this way:</p>
+                            <p>
+                                <code>
+                                    <span class="keyword">using</span> (<span class="keyword">var</span> f = <span class="type">File</span>.CreateText(filename))<br>
+                                    {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;f.Write(<span class="string">"£"</span>);<br>
+                                    }
+                                </code>
+                            </p>
+                            <p>I am afraid: you are out of luck. <code>File.CreateText()</code> does <strong>not</strong> provide anything for changing the encoding. You have to rewrite your code by <code>StreamWriter</code>:</p>
+                            <p>
+                                <code>
+                                    <span class="keyword">using</span> (<span class="keyword">var</span> f = <span class="keyword">new</span> <span class="type">StreamWriter</span>(filename, append: false, encoding: <span class="type">Encoding</span>.UTF8))<br>
+                                    {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;f.Write(<span class="string">"£"</span>);<br>
+                                    }<br>
+                                </code>
+                            </p>
+                            <p>But &nbsp;why? What is it in specifying the encoding that makes pound sign to appear correctly?</p>
+                            <p> <a href="incorrect-pound-sign-csv#more" class="more-link">Continue reading <span class="meta-nav">→</span></a></p>
+                        </div>
+
+                        <footer class="entry-meta">
+                            <p class="tag-links taxonomy-links">
+                                Tagged
+                                <span class="tag">.NET</span>,
+                                <span class="tag">CSV</span>,
+                                <span class="tag">Excel</span>,
+                                <span class="tag">unicode</span>,
+                                <span class="tag">utf8</span>
+                            </p>
+
+                            <p class="date-link"><a href="incorrect-pound-sign-csv" title="Permalink to Incorrect pound sign in CSV files" rel="bookmark" class="permalink"><span class="month">May</span><span class="sep">·</span><span class="day">29</span></a></p>
+                        </footer>
+                    </article>
+
+                    <article id="post-107" class="post-107 post type-post status-publish format-standard hentry category-uncategorized">
+                        <header class="entry-header">
+                            <h1 class="entry-title"><a href="alternatives-to-google-reader" title="Permalink to Alternatives to Google Reader" rel="bookmark">Alternatives to Google Reader</a></h1>
+                            <div class="entry-meta">
+                                <span class="byline">Posted by <span class="author vcard"><a class="url fn n" href="https://plus.google.com/u/0/+ShayanE?rel=author" title="View all posts by Shayan" rel="author">Shayan</a></span></span>
+                            </div>
+                        </header>
+
+                        <div class="entry-content">
+                            <p>Rest in peace Google Reader… if I only knew who in the Google company hold a personal grudge against it? He (or she) convinced bosses to cut down Reader’s social features with a lame excuse that it will bring more users to Google Plus ignoring (or hiding) the fact that the whole atmosphere and the type of things you do “socially” in Reader was very different than what you do in twitter or facebook or &nbsp;even in G+. Then showing statistics to bosses:</p>
+                            <p>“Hey look at here… people are not visiting Google Reader… let’s close it down”</p>
+                            <p>Like it is such a burden on a company like Google to provide a feed reader. Now that it is going to be closed for good we don’t even hear rumors for the source code to be published (like it did for Google Wave) Why not? guess… yes! someone known that if you get the source code and put it on your servers it would be a huge success and a great competitor to G+. But that alleged person is somehow keeping other googlers view dusty. I don’t know how?</p>
+                            <p>Well… never mind… what is done it is done and we have to find alternatives to Google Reader. So far I have seen three good candidates and personally I am going to stick to the last one but let’s go over the other two:</p>
+                            <ul>
+                                <li><a style="line-height: 13px;" href="http://feedly.com/" target="_blank">Feedly</a><span style="line-height: 13px;">: In the first day after&nbsp;announcing Google’s plan to close down the Reader&nbsp;many migrated to feedly until it servers crashed! but it returned back and now it is&nbsp;apparently&nbsp;thriving. My personal&nbsp;opinion? it’s very demanding. It is nothing like Google Reader which was only a url and you could do everything in it. It keeps a processes in the&nbsp;memory&nbsp;and adds icons to sites with feed and all sort of things that give me a chill. It feels like someone breathing over my neck when I am visiting websites. Overall I didn’t like it.</span></li>
+                            </ul>
+                            <ul>
+                                <li><span style="line-height: 13px;"><a href="http://theoldreader.com/" target="_blank">TheOldReader</a>: Unlike Feedly which has no social features TheOldReader has almost all functionalities of the late Google Reader, with all the likes and the shares and finding friends and so on. My opinion in this matter? it’s a bit hefty. The site doesn’t give you that kind of feeling that everything is quick and just a click away. It is slow and interface is kinda bulky.&nbsp;</span></li>
+                            </ul>
+                            <ul>
+                                <li><span style="line-height: 13px;"><a href="https://www.commafeed.com/" target="_blank">CommaFeed</a>: I just recently came across this online feed reader and immediately fall in love with it. It doesn’t have social features (yet) but it is one of the fastest and lightest interfaces I ever seen. Not only it is not demanding as Feedly is but also the source code is available (<a href="https://github.com/Athou/commafeed" target="_blank">here</a>&nbsp;on github) with clear instructions on how to install it on your own server! Just this fact contributes significantly to the confidence you feel when you are using an application or a the website.</span></li>
+                            </ul>
+                            <p>The conclusion is I, personally, will use <a href="https://www.commafeed.com/" target="_blank">CommaFeed</a> as my feed reader. I’ll keep an eye on its progress and hopefully we will see it as major player in this field very soon. At least among those who love and cherish open source culture.</p>
+                            <p>&nbsp;</p>
+                        </div>
+
+                        <footer class="entry-meta">
+                            <p class="date-link"><a href="alternatives-to-google-reader" title="Permalink to Alternatives to Google Reader" rel="bookmark" class="permalink"><span class="month">May</span><span class="sep">·</span><span class="day">28</span></a></p>
+                        </footer>
+                    </article>
+
+                    <article id="post-35" class="post-35 post type-post status-publish format-standard hentry category-raspberry-pi tag-battery tag-ec2 tag-nodejs tag-raspberry-pi">
+                        <header class="entry-header">
+                            <h1 class="entry-title"><a href="battery-for-raspberrypi" title="Permalink to Battery for RaspberryPi" rel="bookmark">Battery for RaspberryPi</a></h1>
+                            <div class="entry-meta">
+                                <span class="byline">Posted by <span class="author vcard"><a class="url fn n" href="https://plus.google.com/u/0/+ShayanE?rel=author" title="View all posts by Shayan" rel="author">Shayan</a></span></span>
+                            </div>
+                        </header>
+
+                        <div class="entry-content">
+                            <p><a href="http://www.raspberrypi.org/" target="_blank">Raspberry Pi</a> is great. It has a lot of brilliant features but one of its most important features is its&nbsp;compact&nbsp;size (~8x5cm, 45g in weight) which makes it a perfect solution for over-intelligent robotic projects. Yet once you got the code running you have to make the device running too and to break free from cords you need a battery for that purpose.</p>
+                            <p>It was my concern too. Raspberry Pi drains about 1A and needs a stable 5v power source. My initial plan was to use a 9v or 12v battery and build a the most efficient possible switching voltage regulator in my power to see how long Raspberry Pi can run with it. I found my circuit, components and the total price came to £36 but just one second before pressing checkout button I decided to see if there is any out of the shelf battery solution for this purpose, and guess what? It was.</p>
+                            <p>I managed to find an&nbsp;<a href="http://www.amazon.co.uk/gp/product/B0063AAIRG/ref=as_li_ss_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=B0063AAIRG&linkCode=as2&tag=shayanelhami-21" target="_blank">Anker® Astro3E Mobile Battery Pack 10000mAh</a>&nbsp;which is in fact an external battery pack to give you extra talking time in travel or conditions where you don’t have access to the power grid to charge your mobile phone. One more time look at its mAg factor: 10,000 m A h ! that is 10 Ah and that is on paper 10 f*cking hours for Raspberry Pi and it was even cheaper than my switching voltage regulator solution (£25.99 at that time). Everything got even better when I managed to keep my RPi alive for 18 hours and 18 minutes!</p>
+                            <p><img class="alignnone size-full wp-image-93" alt="ANKER battery and RPi" src="images/ANKER-RPi.jpg" width="582" height="310"></p>
+                            <p> <a href="battery-for-raspberrypi#more" class="more-link">Continue reading <span class="meta-nav">→</span></a></p>
+                        </div>
+
+                        <footer class="entry-meta">
+                            <p class="tag-links taxonomy-links">
+                                Tagged
+                                <span class="tag">Battery</span>,
+                                <span class="tag">EC2</span>,
+                                <span class="tag">NodeJS</span>,
+                                <span class="tag">Raspberry Pi</span>
+                            </p>
+
+                            <p class="date-link"><a href="battery-for-raspberrypi" title="Permalink to Battery for RaspberryPi" rel="bookmark" class="permalink"><span class="month">May</span><span class="sep">·</span><span class="day">26</span></a></p>
+                        </footer>
+                    </article>
+
+                    <article id="post-39" class="post-39 post type-post status-publish format-standard hentry category-programming tag-code-completion tag-database tag-deployment tag-domain-specific-language tag-dsl tag-intellisense tag-syntax-highlighting tag-visual-studio tag-web-config">
+                        <header class="entry-header">
+                            <h1 class="entry-title"><a href="dsl-syntax-highlighting" title="Permalink to DSL and syntax highlighting" rel="bookmark">DSL and syntax highlighting</a></h1>
+                            <div class="entry-meta">
+                                <span class="byline">Posted by <span class="author vcard"><a class="url fn n" href="https://plus.google.com/u/0/+ShayanE?rel=author" title="View all posts by Shayan" rel="author">Shayan</a></span></span>
+                            </div>
+                        </header>
+
+                        <div class="entry-content">
+                            <p>I&nbsp;truly&nbsp;love DSLs (Domain Specific Languages). Whenever suitable, I don’t hesitate to create one and use them alongside with my projects. Don’t let the term “Language” make you think about the&nbsp;&nbsp;suffering and pain of writing a compiler. Even if you parse your language using string functions (<code>Contains</code>, <code>IndexOf</code>, <code>StartsWith</code>, etc) you are creating a Language and it’s going to save you a lot of time.</p>
+                            <p>The main reason that I go for the DSL option is that each <a href="http://en.wikipedia.org/wiki/General-purpose_programming_language" target="_blank">General Purpose Language</a> introduces a certain overhead to the peace of code that is really responsible for implementing a business logic. Say, I want to change the password of a user. Now think about .NET equivalent of such a code: namespace, class, connection string, command, SQL, etc… Or probably in a domain specific&nbsp;language&nbsp;I could say:</p>
+                            <p><code>Password(John Smith) = 123456</code></p>
+                            <p>Why not?</p>
+                            <p>Well… you may argue that SQL equivalent of the same code is simple enough. Probably:</p>
+                            <p><code>UPDATE Users SET Password = '123456' WHERE Name = 'John Smith';</code></p>
+                            <p>Fair enough, it’s simple but have you noticed the overhead? All those “Update, Users, Set, Where, Name” and quotation and semi-colon? If the job is setting passwords of several people by a script, isn’t the shorter the better? Why do go to that length? Because if you are writing something <strong>maintainable</strong> less code is always better. Remember the wise words:</p>
+                            <p>&nbsp;</p>
+                            <blockquote><p>The more you type, The more bug you create.</p></blockquote>
+                            <p>&nbsp;</p>
+                            <p>It’s not only that. You may have designed your language, in this case, to prevent setting any password if there are more than one “John Smiths” in the database. It is now a feature of your language and your language prevents a serious error that can be easily overlooked in the general purpose SQL.</p>
+                            <p>Now matter how much I emphasis on the beauty of DSLs, I cannot beat&nbsp;Martin Fowler’s&nbsp;<a href="http://www.amazon.co.uk/gp/product/0321712943/ref=as_li_ss_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0321712943&linkCode=as2&tag=shayanelhami-21" >Domain Specific Languages</a>&nbsp;book which I highly recommend for anybody who wants to give it a try. What I want to though mention is a valid argument that people have against DSLs and it has been ignored by those who design and create new languages for decades:</p>
+                            <p> <a href="dsl-syntax-highlighting#more" class="more-link">Continue reading <span class="meta-nav">→</span></a></p>
+                        </div>
+
+                        <footer class="entry-meta">
+                            <p class="tag-links taxonomy-links">
+                                Tagged
+                                <span class="tag">Code completion</span>,
+                                <span class="tag">Database</span>,
+                                <span class="tag">Deployment</span>,
+                                <span class="tag">Domain Specific Language</span>,
+                                <span class="tag">DSL</span>,
+                                <span class="tag">intelliSense</span>,
+                                <span class="tag">Syntax highlighting</span>,
+                                <span class="tag">Visual Studio</span>,
+                                <span class="tag">web.config</span>
+                            </p>
+
+                            <p class="date-link"><a href="dsl-syntax-highlighting" title="Permalink to DSL and syntax highlighting" rel="bookmark" class="permalink"><span class="month">May</span><span class="sep">·</span><span class="day">24</span></a></p>
+                        </footer>
+                    </article>
+
+                    <article id="post-37" class="post-37 post type-post status-publish format-standard hentry category-programming tag-net tag-git">
+                        <header class="entry-header">
+                            <h1 class="entry-title"><a href="copy-git-log-clipboard" title="Permalink to Git &amp; lazy: how did I copy log to clipboard" rel="bookmark">Git &amp; lazy: how did I copy log to clipboard</a></h1>
+                            <div class="entry-meta">
+                                <span class="byline">Posted by <span class="author vcard"><a class="url fn n" href="https://plus.google.com/u/0/+ShayanE?rel=author" title="View all posts by Shayan" rel="author">Shayan</a></span></span>
+                            </div>
+                        </header>
+
+                        <div class="entry-content">
+                            <p>Around a year ago Bruno Oliveira posted a <a href="https://plus.google.com/+BrunoOliveira/posts/MGxauXypb1Y" target="_blank">diagram</a> which went viral. I was totally the true definition&nbsp;of a geek person. Here I repeat it:</p>
+                            <p><a href="https://plus.google.com/+BrunoOliveira/posts/MGxauXypb1Y" target="_blank"><img class="alignnone  wp-image-59" alt="Geek vs non-geek, scripting" src="images/geeks-vs-nongeeks-repetitive-tasks.png" width="347" height="247"></a></p>
+                            <p>&nbsp;</p>
+                            <p>My repetitive task in this case was to fill a&nbsp;time-sheet&nbsp;of whatever I was doing during a day. Among other things, well, of course, I was developing applications and I was “Committing Early,&nbsp;Committing&nbsp;Often”&nbsp;to git. It made sense to use commit messages to fill the time-sheets.</p>
+                            <p> <a href="copy-git-log-clipboard#more" class="more-link">Continue reading <span class="meta-nav">→</span></a></p>
+                        </div>
+
+                        <footer class="entry-meta">
+                            <p class="tag-links taxonomy-links">
+                                Tagged
+                                <span class="tag">.NET</span>,
+                                <span class="tag">git</span>
+                            </p>
+
+                            <p class="date-link"><a href="copy-git-log-clipboard" title="Permalink to Git &amp; lazy: how did I copy log to clipboard" rel="bookmark" class="permalink"><span class="month">May</span><span class="sep">·</span><span class="day">21</span></a></p>
+                        </footer>
+                    </article>
+
+                    <article id="post-31" class="post-31 post type-post status-publish format-standard hentry category-electronics tag-arm tag-embedded tag-firmware tag-microcontroller">
+                        <header class="entry-header">
+                            <h1 class="entry-title"><a href="changing-firmware-of-a-dso-device" title="Permalink to Changing firmware of a DSO device" rel="bookmark">Changing firmware of a DSO device</a></h1>
+                            <div class="entry-meta">
+                                <span class="byline">Posted by <span class="author vcard"><a class="url fn n" href="https://plus.google.com/u/0/+ShayanE?rel=author" title="View all posts by Shayan" rel="author">Shayan</a></span></span>
+                            </div>
+                        </header>
+
+                        <div class="entry-content">
+                            <p>Well, it all started when I was doing some research on ARM processors and so badly wanted to get my hands on one with Thumb-2 instruction set but then it was all the hassle&nbsp;to build a minimum system to just be able to start the tests. I was&nbsp;thinking&nbsp;probably some microcontroller kit can help me here when I quite accidently came across this little gem:</p>
+                            <p><a href="http://www.amazon.co.uk/gp/product/B006CQT49E/ref=as_li_ss_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=B006CQT49E&linkCode=as2&tag=shayanelhami-21" >Digital Oscilloscope DSO Nano DSO201</a></p>
+                            <p>This amazing little device is a digital oscilloscope based on ARM Cortex™-M3 32 bit&nbsp;and comes in a pocket size package with a&nbsp;320×240 16 color LCD,&nbsp;microSD&nbsp;card, LiPo Battery, USB connection and signal generator all in less than £40 (still about the same price at the time of writing). Just amazing!</p>
+                            <p>Obviously I didn’t care much about its oscilloscope functions, what catch my eyes was that it allows changing the firmware (<a href="http://www.seeedstudio.com/forum/viewforum.php?f=22" target="_blank">a&nbsp;forum&nbsp;just about it</a>) and you can put whatever you want on the device to run on that&nbsp;magnificent ARM CPU.</p>
+                            <p>Unfortunately for some reason (Windows 7 driver logic to be&nbsp;precise) methods that were&nbsp;described&nbsp;there couldn’t apply to me so after some sweating and&nbsp;trial&nbsp;and error I found the correct source codes, right tools and the&nbsp;procedure for changing the firmware and here it is the DSO nano running my first code and displaying some info on LCD:</p>
+                            <p><a href="http://www.amazon.co.uk/gp/product/B006CQT49E/ref=as_li_ss_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=B006CQT49E&linkCode=as2&tag=shayanelhami-21"  target="_blank"><img class="alignnone size-full wp-image-41" alt="DSO Device running new firmware" src="images/DSO.jpg" width="582" height="296"></a></p>
+                            <p>The source code for this little project can be found <a href="https://github.com/shayanelhami/DSO_Firmware_base">here at github</a> but you need to read the rest for tips and tricks:</p>
+                            <p> <a href="changing-firmware-of-a-dso-device#more" class="more-link">Continue reading <span class="meta-nav">→</span></a></p>
+                        </div>
+
+                        <footer class="entry-meta">
+                            <p class="tag-links taxonomy-links">
+                                Tagged
+                                <span class="tag">ARM</span>,
+                                <span class="tag">Embedded</span>,
+                                <span class="tag">Firmware</span>,
+                                <span class="tag">Microcontroller</span>
+                            </p>
+
+                            <p class="date-link"><a href="changing-firmware-of-a-dso-device" title="Permalink to Changing firmware of a DSO device" rel="bookmark" class="permalink"><span class="month">May</span><span class="sep">·</span><span class="day">20</span></a></p>
+                        </footer>
+                    </article>
+
+
+					
+					
+					<nav id="nav-below">
                         <div class="nav-previous">
                             <a href="index2.html"><span class="meta-nav">←</span> Older posts</a>
                         </div>
